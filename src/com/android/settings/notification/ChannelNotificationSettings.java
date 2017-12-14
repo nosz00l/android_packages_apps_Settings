@@ -510,8 +510,8 @@ public class ChannelNotificationSettings extends NotificationSettingsBase {
                 .getBoolean(com.android.internal.R.bool.config_intrusiveNotificationLed)) {
             return false;
         }
-        return /*Settings.System.getInt(getContentResolver(),
-                Settings.System.NOTIFICATION_LIGHT_PULSE, 1) == 1;*/true;
+        return Settings.System.getInt(getContentResolver(),
+                Settings.System.NOTIFICATION_LIGHT_PULSE, 1) == 1;
     }
 
     void updateDependents(boolean banned) {
